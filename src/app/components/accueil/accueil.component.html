@@ -1,0 +1,35 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <img src="../../../assets/flycar.png" alt="Logo" class="navbar-brand-logo">
+      <a  class="navbar-brand"><i class="fas fa-code me-2"></i>flycar  </a>
+      <button class="navbar-toggler" data-bs-target="#my-nav" data-bs-toggler="collapse" aria-controls="my-nav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="my-nav" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/home" class="nav-link"><i class="fas fa-home me-1"></i>Home</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/categorie" class="nav-link"><i class="fa-solid fa-car"></i> categorie   </a>
+          </li>
+          <li class="nav-item" routerLinkActive="active">
+            <a routerLink="/contact" class="nav-link"><i class="fas fa-envelope me-1"></i>Contacts</a>
+          </li>
+          <li class="nav-item active">
+            <div>
+              <!-- If user is logged in, display "Logout" and call the logout method -->
+              <a *ngIf="auth.isLoggedIn()" class="nav-link" href="javascript:void(0)" (click)="logout()"><i class="fas fa-user-plus me-1"></i>logout</a>
+              
+              <!-- If user is not logged in, display "Login" and call the login method -->
+              <a *ngIf="!auth.isLoggedIn()"  class="nav-link"  href="javascript:void(0)" (click)="login()"><i class="fas fa-user-plus me-1"></i>login</a>
+            </div>
+          
+        </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  

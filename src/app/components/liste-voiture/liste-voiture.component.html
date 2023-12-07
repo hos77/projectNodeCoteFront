@@ -1,0 +1,33 @@
+
+<div class="container mt-4">
+    <div class="row">
+      <!-- Use ngFor to iterate over the list of cars and display them in cards -->
+      <div class="col-md-4" *ngFor="let voiture of voitures">
+<div class="card">
+
+    <!-- Card image -->
+    <div class="view overlay">
+        <img class="card-img-top" [src]="voiture.picture" alt="Car Image">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+  
+    <!-- Card content -->
+    <div class="card-body">
+        <h4 class="card-title">{{ voiture.marque }}</h4>
+        <p class="card-text">
+          
+          <span class="price-value">{{ voiture.prix | currency:'USD' }}</span>
+        </p>
+        <p class="card-text">
+          
+          <span class="availability-value">{{ voiture.disponible ? 'Available' : 'Not Available' }}</span>
+        </p>
+        <a href="#" class="btn btn-primary">View Details</a>
+      </div>
+  
+  </div>
+</div>
+</div>
+</div>

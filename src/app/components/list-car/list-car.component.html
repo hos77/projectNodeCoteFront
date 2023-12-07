@@ -1,0 +1,28 @@
+<div class="container mt-4">
+    <h2>Categories</h2>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Category Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Photo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let category of categories">
+          <td>{{ category.nom }}</td>
+          <td>{{ category.description }}</td>
+          <td>
+            <img [src]="category.photo" alt="Category Photo" class="img-fluid" style="max-width: 50px; border-radius: 5px;" />
+          </td>
+
+          <td>
+            <button class="btn btn-primary" (click)="navigateToListeVoiture(category._id)">View Voitures</button>
+          </td>
+
+
+        
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,21 @@
+.container {
+    background-color: #f8f9fa; /* Light gray background color */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .table {
+    background-color: #fff; /* White background color */
+  }
+  
+  .table th, .table td {
+    text-align: center;
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: #f1f3f5; /* Alternating row color */
+  }
+  
+  .table-bordered th, .table-bordered td {
+    border: 1px solid #dee2e6; /* Border color */
+  }

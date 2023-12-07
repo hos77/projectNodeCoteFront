@@ -1,0 +1,11 @@
+.router{
+    .registration-container {
+        
+        position: relative;
+        z-index: 0; 
+      }
+}
+.footer{
+position: relative;
+  z-index: 1;
+}
